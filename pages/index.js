@@ -4,9 +4,23 @@ import Head from "../components/head"; // component that updates metadata for ea
 import Nav from "../components/nav"; // reusable navbar component
 
 const Home = () => (
-  <div>
+  <div className="home-content">
     <Nav />
-    <div>Next meets React</div>
+    {/* Here we are styling to div, to change the color of our text and aligning the text to the right side */}
+    <div
+      className="home-content__header"
+      style={{ color: "red", textAlign: "right" }}
+    >
+      Next meets React
+    </div>
+    {/* We have increased the font-size of a div of class name home-content__header */}
+    <style jsx>
+      {`
+        .home-content__header {
+          font-size: 32pt;
+        }
+      `}
+    </style>
   </div>
 );
 
